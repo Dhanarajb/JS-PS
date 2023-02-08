@@ -219,7 +219,7 @@
 // -------------------------- another
 
 // const Dups = (arr) => {
-//   let DupArr = arr.filter((val, index, arr) => arr.indexOf(val) !== index);
+//   let DupArr = arr.filter((val, index) => arr.indexOf(val) !== index);
 //   console.log(DupArr);
 // };
 // Dups([1, 2, 3, 2, 1, 3, 2, 3, 4]);
@@ -293,21 +293,40 @@
 //   }
 // }
 
+// function findMissingNumber(array) {
+//   let max = array.length;
+//   let expectedSum = (max * (max + 1)) / 2;
+//   let actualSum = array.reduce((sum, number) => sum + number);
+//   return expectedSum - actualSum;
+// }
+// console.log(findMissingNumber([0, 6, 2, 3, 5, 1]));
 //------------- find common char and print them. eg. "wellness","Awesome" javascript------------
 
 // let str1 = 'wellness';
 // let str2 = 'Awesome';
-// let common = '';
+// const comm = (str1, str2) => {
+//   let common = '';
 
-// for (let i = 0; i < str1.length; i++) {
-//   if (str2.includes(str1[i])) {
-//     common += str1[i];
+//   for (let i = 0; i < str1.length; i++) {
+//     if (str2.includes(str1[i])) {
+//       common += str1[i];
+//     }
 //   }
-// }
 
-// console.log(common);
+//   console.log(common);
+// };
+// comm('wellness', 'Awesome');
+
 
 // --------rotating by 2 position---------
+// function rotateArray(arr, n) {
+//   return arr.slice(n, arr.length).concat(arr.slice(0, n));
+// }
+
+// let arr = [1, 2, 3, 4, 5];
+// console.log(arr)
+// let rotatedArray = rotateArray(arr, 2);
+// console.log(rotatedArray); // [3, 4, 5, 1, 2]
 
 // ---------arow Functions----------
 // without parameter
