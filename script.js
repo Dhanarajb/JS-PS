@@ -34,14 +34,14 @@
 // MaxFind([1, 2, 3, 2, 223, 3, 4, 4, 555, 3]);
 
 // --------------2nd largest-----------------
-// const SecondLarge=(arr)=>{
-//   let FirstLarge=Math.max(...arr)
-//   let index = arr.indexOf(FirstLarge)
-//   arr.splice(index,1)
-//   let SecondLargee=Math.max(...arr)
-//   console.log(SecondLargee)
-// }
-// SecondLarge([1, 2, 3, 2, 223, 3, 4, 4, 555, 3])
+// const SecondLarge = (arr) => {
+//   let FirstLarge = Math.max(...arr);
+//   let index = arr.indexOf(FirstLarge);
+//   arr.splice(index);
+//   let SecondLargee = Math.max(...arr);
+//   console.log(SecondLargee);
+// };
+// SecondLarge([1, 2, 3, 224, 223, 3, 4, 4, 555, 3]);
 
 // // ----------------Min element in arr----------
 // const MinFind=(arr)=>{
@@ -295,17 +295,17 @@
 
 //------------- find common char and print them. eg. "wellness","Awesome" javascript------------
 
-let str1 = 'wellness';
-let str2 = 'Awesome';
-let common = '';
+// let str1 = 'wellness';
+// let str2 = 'Awesome';
+// let common = '';
 
-for (let i = 0; i < str1.length; i++) {
-  if (str2.includes(str1[i])) {
-    common += str1[i];
-  }
-}
+// for (let i = 0; i < str1.length; i++) {
+//   if (str2.includes(str1[i])) {
+//     common += str1[i];
+//   }
+// }
 
-console.log(common);
+// console.log(common);
 
 // --------rotating by 2 position---------
 
