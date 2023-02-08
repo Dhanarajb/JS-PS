@@ -328,67 +328,12 @@
 // let rotatedArray = rotateArray(arr, 2);
 // console.log(rotatedArray); // [3, 4, 5, 1, 2]
 
-// ---------arow Functions----------
-// without parameter
-// const fun=()=>console.log('ihi')
-// fun()
+//-------------fib nacii-----
 
-// return the value
-// const fun=()=>{
-//   return "hello"
-// }
-// console.log(fun())
-
-// One parameter
-// let greet = (name) => `hi ${name}`;
-// console.log(greet('Dhanu'));
-
-// Regular fun vs arrowfun
-// let add=(a,b)=>a+b
-// console.log('1+2=',add(1,2))
-
-// // Regular function expresssion
-// let add2=function(a,b){
-//   return a+b
-// }
-
-// // Regular function declaration
-// function add3(a,b){
-//   return a+b
-// }
-// add()
-// console.log(add2(1,2))
-// console.log(add3(1,2))
-
-// const text = 'a1';
-
-// if(isNaN(text)){
-//   console.log('not a number')
-// }else{
-//   console.log("it is a number")
-// }
-
-// for(let i=0;i<10;i++){
-//   setTimeout(()=>{
-//     console.log(i)
-//   },1000)
-// }
-
-// console.log('hi')
-// setTimeout(()=>console.log('theree'),5000)
-// console.log('hello')
-
-// function fun1(a){
-//   return function fun2(b){
-//      return a*b
-//   }
-// }
-// console.log(fun1(4)(5))
-// var obj = {
-//   test1: 1,
-//   test2: 2,
-// };
-// obj = {test: 0};
-// console.log(obj);
-// obj.test1 = 10;
-// console.log(obj);
+function fibonacci(n){
+  if(n<=1)
+    return n;
+  else
+    return fibonacci(n-1) + fibonacci (n-2);  
+}
+console.log(fibonacci(4))
