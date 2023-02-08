@@ -330,10 +330,29 @@
 
 //-------------fib nacii-----
 
-function fibonacci(n){
-  if(n<=1)
-    return n;
-  else
-    return fibonacci(n-1) + fibonacci (n-2);  
-}
-console.log(fibonacci(4))
+// function fibonacci(n){
+//   if(n<=1)
+//     return n;
+//   else
+//     return fibonacci(n-1) + fibonacci (n-2);  
+// }
+// console.log(fibonacci(4))
+
+// ---------------gcd---------
+// function greatestCommonDivisor(a, b){
+//   if(b == 0)
+//     return a;
+//   else 
+//     return greatestCommonDivisor(b, a%b);
+// }
+       
+// console.log(greatestCommonDivisor(12,23))
+
+// ------------reverse in place-----------
+// function reverseInPlace(str){
+//   return str.split(' ').reverse().join(' ').split('').reverse().join('');
+// }
+
+// console.log(reverseInPlace('I am the good boy'));
+
+// -----------
