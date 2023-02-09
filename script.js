@@ -317,7 +317,6 @@
 // };
 // comm('wellness', 'Awesome');
 
-
 // --------rotating by 2 position---------
 // function rotateArray(arr, n) {
 //   return arr.slice(n, arr.length).concat(arr.slice(0, n));
@@ -334,7 +333,7 @@
 //   if(n<=1)
 //     return n;
 //   else
-//     return fibonacci(n-1) + fibonacci (n-2);  
+//     return fibonacci(n-1) + fibonacci (n-2);
 // }
 // console.log(fibonacci(4))
 
@@ -342,10 +341,10 @@
 // function greatestCommonDivisor(a, b){
 //   if(b == 0)
 //     return a;
-//   else 
+//   else
 //     return greatestCommonDivisor(b, a%b);
 // }
-       
+
 // console.log(greatestCommonDivisor(12,23))
 
 // ------------reverse in place-----------
@@ -355,4 +354,10 @@
 
 // console.log(reverseInPlace('I am the good boy'));
 
-// -----------
+// -----------Remove zero
+const arr = [1, 2, 0, 20, 0, 020, 0, 20, 4, 50];
+
+const rem = arr.filter(function(ele){
+  return ele!==0;
+});
+console.log(rem);
