@@ -26,6 +26,15 @@
 //   }
 //   console.log(rever);
 // })('dhanaraj');
+// -----------Reverse the integer-----------
+// const reverInt=(n)=>{
+//   return (n.toString().split('').reverse().join(''))
+// }
+// console.log({
+//   testcase1:reverInt(51),
+//   testcase2:reverInt(-342),
+//   testcase2:reverInt(500)
+// })
 // -------------Max element in arr---------
 // const MaxFind = (arr) => {
 //   let max = arr.reduce((prev, curr) => (prev > curr ? prev : curr));
@@ -93,15 +102,6 @@
 // };
 // maxChar('Dhanarappppj');
 
-// -----------Reverse the integer-----------
-// const reverInt=(n)=>{
-//   return (n.toString().split('').reverse().join(''))
-// }
-// console.log({
-//   testcase1:reverInt(51),
-//   testcase2:reverInt(-342),
-//   testcase2:reverInt(500)
-// })
 // ---------------FizzBuzz--------------
 
 // function fizbuz(n) {
@@ -355,9 +355,56 @@
 // console.log(reverseInPlace('I am the good boy'));
 
 // -----------Remove zero
-const arr = [1, 2, 0, 20, 0, 020, 0, 20, 4, 50];
+// const arr = [1, 2, 0, 20, 0, 020, 0, 20, 4, 50];
 
-const rem = arr.filter(function(ele){
-  return ele!==0;
-});
-console.log(rem);
+// const rem = arr.filter(function(ele){
+//   return ele!==0;
+// });
+// console.log(rem);
+// ------------------removove duplicate-------
+// let input = "my name is akash is";
+// let words = input.split(" ");
+// let uniqueWords = {};
+
+// for (let i = 0; i < words.length; i++) {
+//   uniqueWords[words[i]] = true;
+// }
+
+// let uniqueArray = Object.keys(uniqueWords);
+// let reversedWords = uniqueArray.map(word => word.split("").reverse().join(""));
+// let output = reversedWords.join(" ");
+
+// console.log(output); // "hsaka si eman ym"
+
+// ----------------
+
+// let input = 'my name is akash is';
+// let words = input.split(' ');
+// let uniqueWords = words.filter((word, index) => words.indexOf(word) === index);
+// let reversedWords = uniqueWords.map((word) =>
+//   word.split('').reverse().join('')
+// );
+// let output = reversedWords.join(' ');
+
+// console.log(output); // "hsaka si eman ym"
+// // console.log(reversedWords)
+
+// --------------anagram group-----------
+
+const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
+
+const map = new Map();
+
+for (const str of strs) {
+  const sortedStr = str.split('').sort().join('');
+  if (map.has(sortedStr)) {
+    map.get(sortedStr).push(str);
+  } else {
+    map.set(sortedStr, [str]);
+  }
+}
+
+const result = Array.from(map.values());
+
+console.log(result);
+// Output: [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
