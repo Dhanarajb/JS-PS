@@ -75,14 +75,14 @@
 // })('nayan');
 
 // ------------occurance-----------
-// const maxChar=(str)=>{
-//   let obj = {};
-//   for(let char of str){
-//     (!obj[char]) ? obj[char]=1:obj[char]++;
-//   }
-//   console.log(obj)
-// }
-// maxChar("Dhanaraj")
+const maxChar=(str)=>{
+  let obj = {};
+  for(let char of str){
+    (!obj[char]) ? obj[char]=1:obj[char]++;
+  }
+  console.log(obj)
+}
+maxChar("Dhanaraj")
 
 // const maxChar = (str) => {
 //   let obj = {};
@@ -391,20 +391,52 @@
 
 // --------------anagram group-----------
 
-const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
+// const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
 
-const map = new Map();
+// const map = new Map();
 
-for (const str of strs) {
-  const sortedStr = str.split('').sort().join('');
-  if (map.has(sortedStr)) {
-    map.get(sortedStr).push(str);
-  } else {
-    map.set(sortedStr, [str]);
+// for (const str of strs) {
+//   const sortedStr = str.split('').sort().join('');
+//   if (map.has(sortedStr)) {
+//     map.get(sortedStr).push(str);
+//   } else {
+//     map.set(sortedStr, [str]);
+//   }
+// }
+
+// const result = Array.from(map.values());
+
+// console.log(result);
+// Output: [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
+// -----------two sum-------
+// function twoSum(nums, target) {
+//   const map = {};
+//   for (let i = 0; i < nums.length; i++) {
+//     const complement = target - nums[i];
+//     if (complement in map) {
+//       return [map[complement], i];
+//     }
+//     map[nums[i]] = i;
+//   }
+//   return null;
+// }
+function twoSum(nums, target) {
+  let left = 0;
+  let right = nums.length - 1;
+  while (left < right) {
+    const sum = nums[left] + nums[right];
+    if (sum === target) {
+      return [left, right];
+    } else if (sum < target) {
+      left++;
+    } else {
+      right--;
+    }
   }
+  return null;
 }
 
-const result = Array.from(map.values());
-
-console.log(result);
-// Output: [ [ 'eat', 'tea', 'ate' ], [ 'tan', 'nat' ], [ 'bat' ] ]
+const nums = [2, 7, 11, 15];
+const target = 9;
+const indices = twoSum(nums, target);
+console.log(indices); // Output: [0, 1]
