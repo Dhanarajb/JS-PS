@@ -476,7 +476,7 @@
 //   console.log(sum)
 // }
 // EvenNum([1,2,3,4,5,6,7,8,9])
-
+// ----------------------------------------------
 // Write a function that takes a string and returns the first non-repeated character in the string
 
 // const NonRepeat=(str)=>{
@@ -498,7 +498,7 @@
 // let str ="dhaanrccj"
 // let NonR = NonRepeat(str)
 // console.log(NonR)
-
+// ----------------------------------------------
 // Write a program that takes a number as input and outputs a string of alternating "ping" and "pong" words, starting with "ping", until the count is reached. For example, if the input number is 4, the output should be "ping-pong-ping-pong".
 
 // function pingPong(num) {
@@ -519,7 +519,7 @@
 // let num = 4;
 // let pingPongStr = pingPong(num);
 // console.log(pingPongStr);
-
+// ----------------------------------------------
 // Write a program that takes a number as input and outputs the Fibonacci sequence up to that number. For example, if the input is 8, the output should be "0 1 1 2 3 5 8".
 // function fibonacci(num) {
 //   let fibArr = [0, 1];
@@ -533,4 +533,62 @@
 // let num = 8;
 // let fibSeq = fibonacci(num);
 // console.log(fibSeq);
+// ----------------------------------------------
+// Write a function that takes two arrays of numbers and returns a new array containing only the unique elements from both arrays.
+// const uniq = (arr1, arr2) => {
+//   let newSet = new Set([...arr1, ...arr2]);
+//   return Array.from(newSet);
+// };
+// const arr1 = [1, 2, 3, 4];
+// const arr2 = [3, 4, 5, 6];
+// const uniqueArr = uniq(arr1, arr2);
+// console.log(uniqueArr); // Output: [1, 2, 3, 4, 5, 6]
+// --------------------------------------------------
+// Write a function that takes a string and returns the number of vowels in the string.
+// function countVowels(str) {
+//   const vowels = ['a', 'e', 'i', 'o', 'u'];
+//   let count = 0;
 
+//   for (let i = 0; i < str.length; i++) {
+//     const char = str[i].toLowerCase();
+//     if (vowels.includes(char)) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+// const str = 'Hello, world!';
+// const numVowels = countVowels(str);
+// console.log(numVowels); // Output: 3
+// --------------------------------------------------
+// Factorial
+
+// const Fact = (n) => {
+//   if (n == 1) {
+//     return 1;
+//   }
+//   return n * Fact(n - 1);
+// };
+// const real = Fact(5);
+// console.log(real);
+// --------------------------------------------------
+
+// --------------------------------------------------
+// --------------------------------------------------
+
+// --------------------------------------------------// --------------------------------------------------
+
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
+
+// --------------------------------------------------
+
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
+// --------------------------------------------------
