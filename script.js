@@ -75,14 +75,14 @@
 // })('nayan');
 
 // ------------occurance-----------
-const maxChar=(str)=>{
-  let obj = {};
-  for(let char of str){
-    (!obj[char]) ? obj[char]=1:obj[char]++;
-  }
-  console.log(obj)
-}
-maxChar("Dhanaraj")
+// const maxChar=(str)=>{
+//   let obj = {};
+//   for(let char of str){
+//     (!obj[char]) ? obj[char]=1:obj[char]++;
+//   }
+//   console.log(obj)
+// }
+// maxChar("Dhanaraj")
 
 // const maxChar = (str) => {
 //   let obj = {};
@@ -420,23 +420,117 @@ maxChar("Dhanaraj")
 //   }
 //   return null;
 // }
-function twoSum(nums, target) {
-  let left = 0;
-  let right = nums.length - 1;
-  while (left < right) {
-    const sum = nums[left] + nums[right];
-    if (sum === target) {
-      return [left, right];
-    } else if (sum < target) {
-      left++;
-    } else {
-      right--;
-    }
-  }
-  return null;
-}
+// function twoSum(nums, target) {
+//   let left = 0;
+//   let right = nums.length - 1;
+//   while (left < right) {
+//     const sum = nums[left] + nums[right];
+//     if (sum === target) {
+//       return [left, right];
+//     } else if (sum < target) {
+//       left++;
+//     } else {
+//       right--;
+//     }
+//   }
+//   return null;
+// }
 
-const nums = [2, 7, 11, 15];
-const target = 9;
-const indices = twoSum(nums, target);
-console.log(indices); // Output: [0, 1]
+// const nums = [2, 7, 11, 15];
+// const target = 9;
+// const indices = twoSum(nums, target);
+// console.log(indices); // Output: [0, 1]
+// // ---------------remove dups---------
+// function findFirstRepeatingChar(str) {
+//   // Create an empty object to store character counts
+//   let charMap = {};
+
+//   // Loop through each character of the string
+//   for (let char of str) {
+//     // If the current character has already been seen, return it
+//     if (charMap[char]) {
+//       return char;
+//     } else {
+//       // Otherwise, mark the character as seen in the charMap object
+//       charMap[char] = true;
+//     }
+//   }
+
+//   // If we reach the end of the string without finding a repeating character, return null
+//   return null;
+// }
+
+// let str = "character";
+// let firstRepeatingChar = findFirstRepeatingChar(str);
+
+// console.log(firstRepeatingChar);
+// -----Write a program that takes an array of numbers and returns the sum of the even numbers-----
+
+// const EvenNum=(arr)=>{
+//   let sum=0;
+//   for(let ch of arr){
+//     if(ch%2==0){
+//       sum+=ch
+//     }
+//   }
+//   console.log(sum)
+// }
+// EvenNum([1,2,3,4,5,6,7,8,9])
+
+// Write a function that takes a string and returns the first non-repeated character in the string
+
+// const NonRepeat=(str)=>{
+//   let nom={}
+//   for(let char of str){
+//     if(nom[char]){
+//       nom[char]++
+//     }else{
+//       nom[char]=1
+//     }
+//   }
+//   for(let char of str){
+//     if(nom[char]===1){
+//       return char
+//     }
+//   }
+//  return null
+// }
+// let str ="dhaanrccj"
+// let NonR = NonRepeat(str)
+// console.log(NonR)
+
+// Write a program that takes a number as input and outputs a string of alternating "ping" and "pong" words, starting with "ping", until the count is reached. For example, if the input number is 4, the output should be "ping-pong-ping-pong".
+
+// function pingPong(num) {
+//   let output = '';
+//   for (let i = 1; i <= num; i++) {
+//     if (i % 2 === 1) {
+//       output += ' ping ';
+//     } else {
+//       output += ' pong';
+//     }
+//     // if (i < num) {
+//     //   output += "-";
+//     // }
+//   }
+//   return output;
+// }
+
+// let num = 4;
+// let pingPongStr = pingPong(num);
+// console.log(pingPongStr);
+
+// Write a program that takes a number as input and outputs the Fibonacci sequence up to that number. For example, if the input is 8, the output should be "0 1 1 2 3 5 8".
+// function fibonacci(num) {
+//   let fibArr = [0, 1];
+//   for (let i = 2; i <= num; i++) {
+//     let nextNum = fibArr[i-1] + fibArr[i-2];
+//     fibArr.push(nextNum);
+//   }
+//   return fibArr.slice(0, num+1).join(" ");
+// }
+
+// let num = 8;
+// let fibSeq = fibonacci(num);
+// console.log(fibSeq);
+
