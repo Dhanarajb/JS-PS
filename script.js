@@ -75,15 +75,59 @@
 // // })('nayan');
 
 // // ------------occurance-----------
-// // const maxChar=(str)=>{
-// //   let obj = {};
-// //   for(let char of str){
-// //     (!obj[char]) ? obj[char]=1:obj[char]++;
-// //   }
-// //   console.log(obj)
-// // }
-// // maxChar("Dhanaraj")
+// const maxChar = (str) => {
+//   let obj = {};
+//   for (let char of str) {
+//     !obj[char] ? (obj[char] = 1) : obj[char]++;
+//   }
+//   console.log(obj);
+// };
+// maxChar('Dhanaraj');
 
+// function sameSquared(arr1, arr2) {
+//   // Check if the arrays have the same length
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   }
+
+//   // Create frequency counters for the squared values of arr1 and arr2
+//   const frequencyCounter1 = {};
+//   const frequencyCounter2 = {};
+
+//   // Count the frequency of squared values in arr1
+//   for (let num of arr1) {
+//     const squared = num * num;
+//     frequencyCounter1[squared] = frequencyCounter1[squared] + 1;
+//   }
+
+//   // Count the frequency of squared values in arr2
+//   for (let num of arr2) {
+//     frequencyCounter2[num] = frequencyCounter2[num] + 1;
+//   }
+
+//   // Check if the squared frequencies match
+//   for (let key in frequencyCounter1) {
+//     if (!(key in frequencyCounter2)) {
+//       return false;
+//     }
+//     if (frequencyCounter1[key] !== frequencyCounter2[key]) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// // Example usage
+// const result = sameSquared([1, 9, 3], [4, 1, 9]);
+// console.log(result); // Output: true
+
+// anagram
+function anu(a) {
+  return a.split('').reverse().join('');
+}
+console.log(anu('nayan'));
+console.log();
 // // const maxChar = (str) => {
 // //   let obj = {};
 // //   for (let char of str) {
@@ -624,14 +668,14 @@
 // var myArray = ['a', 1, 'a', 2, '1'];
 // var unique = myArray.filter((value, index, arr) => arr.indexOf(value) === index);
 // ================================================================================================================================================================================
-// Code 4:String reverse without reversing of individual words (Array of elements can be reverse with reverse() method but for string it is won't possible so required to split 
+// Code 4:String reverse without reversing of individual words (Array of elements can be reverse with reverse() method but for string it is won't possible so required to split
 // and then join().
 // function removeDuplicates(){
 //    var string ="India is my country"
 //    let result = string.split('').reverse().join('').split(' ').reverse().join(' ')
 //    return result
 // }
-// console.log(removeDuplicates()) 
+// console.log(removeDuplicates())
 // output = "aidnI si ym yrtnuoc"
 // ------------------------------------------
 // var reverseWords = function(s) {
@@ -689,8 +733,8 @@
 //    let str2 =  b.toLowerCase().split('').sort().join('');
 //    if(str1 === str2){
 //       console.log("True");
-//    } 
-//    else { 
+//    }
+//    else {
 //       console.log("False");
 //    }
 // }
@@ -705,7 +749,7 @@
 // console.log (a,b,c)
 // ================================================================================================================================================================================
 // Code 10: Swapping of 2 numbers without third variable
-// let a=10; 
+// let a=10;
 // let b=20;
 //    a=a+b //30
 //    b=a-b //10
@@ -741,7 +785,7 @@
 // }
 // checkPalindrome()
 // ================================================================================================================================================================================
-// Code 13: To find longest word from a string using (for of) /*for(var i=0; i>=num; i++) means iterate by indexing*/  /*for (var word of words) means iterate by an elements not 
+// Code 13: To find longest word from a string using (for of) /*for(var i=0; i>=num; i++) means iterate by indexing*/  /*for (var word of words) means iterate by an elements not
 // by indexing*/
 // function longestWord(){
 //    let string = "supriya is a masooooom good girl"
@@ -763,7 +807,7 @@
 //    var arr= string.split(' ')
 //    var longest=" "
 //    for(var i=0; i<arr.length; i++){
-      
+
 //         if (arr[i].length > longest.length)
 //         {
 //             longest=arr[i];
@@ -778,7 +822,7 @@
 //   var str = "Priya is a goog girl and having hardworking skill"
 //   var longestWord = str.split(' ').sort((a, b) => {return b.length - a.length }); //in desc order //from greater to smallest word
 //      console.log(longestWord[0]);
-//      console.log(longestWord[0].length); 
+//      console.log(longestWord[0].length);
 // }
 // findLongestWord();
 // ================================================================================================================================================================================
@@ -786,10 +830,10 @@
 // function longest() {
 //   var str ="Priya is a good girl and having hardworking skills"
 //   var words = str.split(' ');
-//   var longest = ''; 
+//   var longest = '';
 //   for (var i = 0; i < words.length; i++) {
 //     if (words[i].length > longest.length) {
-//       longest = words[i]; 
+//       longest = words[i];
 //     }
 //   }
 //   console.log(longest)
@@ -808,7 +852,7 @@
 //   console.log(arr[0].substring(0,i)) // "go"
 //   return arr[0].substring(0,i)
 // }
-// longestCommonString() 
+// longestCommonString()
 // --------------------------------------------------------------------
 // function longestCommonString(){
 //   array=["got","google","gosh"]
@@ -819,7 +863,7 @@
 //   }
 //   console.log(arr[0].slice(0,i))
 // }
-// longestCommonString() 
+// longestCommonString()
 // --------------------------------------------------------------------
 // function longestCommonString(){
 //  let array=["go","google","gosh"]
@@ -929,7 +973,7 @@
 // console.log(result)
 // ================================================================================================================================================================================
 // Code 22: To find the largest pair of the 2 elements using indexing with sorted elements
-// function largestPairSumofTwo(num){   
+// function largestPairSumofTwo(num){
 //     return num[num.length-1] + num[num.length-2];
 // }
 // const result = largestPairSumofTwo([1,2,3,4,5,6,7,8,9])
@@ -946,7 +990,7 @@
 //    let n1 = 0, n2 = 1, nextTerm, arr=[]
 //    arr.push(n1)
 //    arr.push(n2)
-//    for (let i = 1; i <= number; i++) 
+//    for (let i = 1; i <= number; i++)
 //    {
 //      console.log(n1);
 //      nextTerm = n1 + n2;
@@ -961,7 +1005,7 @@
 // Code 25: Fibonacci Series (0,1,1,2,3,5,8,13....) where keeping in array
 // function listFibonacci(n) {
 // var arr = [0, 1]
-//   for (var  i = 1; i < n; i++) 
+//   for (var  i = 1; i < n; i++)
 //     arr.push(arr[i] + arr[i - 1])
 
 //   return arr
@@ -970,7 +1014,7 @@
 // -----------------------------------------------------------------------
 // function listFibonacci(n) {
 // var arr = [0, 1]
-//   for (var  i = 0; i < n; i++) 
+//   for (var  i = 0; i < n; i++)
 //     arr.push(arr[i] + arr[i + 1])
 
 //   return arr
@@ -981,11 +1025,11 @@
 // function missingElement(){
 //   var a = [1,2,5]
 //   var missing = [];
-//   for (var i = 1; i <= 6; i++) 
+//   for (var i = 1; i <= 6; i++)
 //    {
-//     if (a.indexOf(i) == -1) 
+//     if (a.indexOf(i) == -1)
 //      {
-//        missing.push(i); 
+//        missing.push(i);
 //      }
 //    }
 //  console.log(missing) //missing array
@@ -1022,7 +1066,7 @@
 // ================================================================================================================================================================================
 // Code 29: Sorting of an number
 // function sorting(arr) {
-//  return  arr.sort((a,b)=>{return a-b}) 
+//  return  arr.sort((a,b)=>{return a-b})
 // }
 // console.log(sorting([1,23,34,2,76,78])) //[1, 2, 23, 34, 76, 78]
 // ================================================================================================================================================================================
@@ -1050,7 +1094,7 @@
 //     }
 // }
 // --------------------------------------
-// for (let i = 2; i <= 100; i++) 
+// for (let i = 2; i <= 100; i++)
 // {
 //     let flag = 0;
 //     for (let j = 2; j < i; j++) { //2<2 //2<3 //3<4
@@ -1059,7 +1103,7 @@
 //             break;
 //         }
 //     }
-//     if (i > 1 && flag == 0) 
+//     if (i > 1 && flag == 0)
 //     {
 //         document.write(i+ "</br>");
 //     }
@@ -1087,9 +1131,9 @@
 //     }
 //     return -1
 // }
-// console.log(firstDuplicate()) 
+// console.log(firstDuplicate())
 // ================================================================================================================================================================================
-// Code 34: Write a program that prints the numbers from 1 to 100. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz". 
+// Code 34: Write a program that prints the numbers from 1 to 100. But for multiples of three, print "Fizz" instead of the number, and for the multiples of five, print "Buzz".
 // For numbers which are multiples of both three and five, print "FizzBuzz"
 // for (var i=1; i <= 20; i++)
 // {
@@ -1103,7 +1147,7 @@
 //         console.log(i);
 // }
 // ================================================================================================================================================================================
-// Code 35: Uppercase of each first letter of a words 
+// Code 35: Uppercase of each first letter of a words
 // function upperCaseFirsstLetter(){
 //    var string ="India is my country";
 //    var words = string.toLowerCase().split(" ")
@@ -1136,7 +1180,7 @@
 // }
 // console.log(confirmEnding("priya","a"))
 // ===============================================================================================================================================================================
-// Code 39: To find the largest elements fro the 2 dimensional array 
+// Code 39: To find the largest elements fro the 2 dimensional array
 // function largestFromArray(arr){
 //    var max=[];
 //    for(var i=0; i<arr.length;i++){
@@ -1344,51 +1388,51 @@
 // ================================================================================================================================================================================
 // code 57: Remove or Delete elements from an array using various ways
 // Way 1: Removing Elements from End of a JavaScript Array
-//        var ar = [1, 2, 3, 4, 5, 6]; 
+//        var ar = [1, 2, 3, 4, 5, 6];
 //        ar.length = 4; // set length to remove elements
 //        console.log( ar ); // [1, 2, 3, 4]
-    
+
 // Way 2: Removing Elements from Beginning of a JavaScript Array
 //         var ar = ['zero', 'one', 'two', 'three'];
 //         ar.shift(); // returns "zero"
 //         console.log( ar ); // ["one", "two", "three"]
-        
+
 // Way 3: Using Splice to Remove Array Elements in JavaScript
 //         var list = ["bar", "baz", "foo", "qux"];
 //         list.splice(0, 2); // Starting at index position 0, remove two elements ["bar", "baz"] and retains ["foo", "qux"].
-        
+
 // Way 4: Removing Array Items By Value Using Splice
 //        var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-//        for( var i = 0; i < arr.length; i++){ 
-//            if ( arr[i] === 5) { 
-//               arr.splice(i, 1); 
+//        for( var i = 0; i < arr.length; i++){
+//            if ( arr[i] === 5) {
+//               arr.splice(i, 1);
 //            }
 //        } // [1, 2, 3, 4, 6, 7, 8, 9, 0]
-       
+
 //        OR
-       
+
 //         var arr = [1, 2, 3, 4, 5, 5, 6, 7, 8, 5, 9, 0];
-//         for( var i = 0; i < arr.length; i++){                             
-//         if ( arr[i] === 5) { 
-//             arr.splice(i, 1); 
-//             i--; 
+//         for( var i = 0; i < arr.length; i++){
+//         if ( arr[i] === 5) {
+//             arr.splice(i, 1);
+//             i--;
 //           }
 //         } // [1, 2, 3, 4, 6, 7, 8, 9, 0]
-        
+
 // Way 5: Using the Array filter Method to Remove Items By Value
 //         var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
-//         var filtered = array.filter(function(value, index, arr){ 
+//         var filtered = array.filter(function(value, index, arr){
 //         return value > 5;
 //         }); //filtered => [6, 7, 8, 9]
-   
+
 // Way 6: Making a Remove Method
-//        function arrayRemove(arr, value) { 
-//         return arr.filter(function(ele){ 
-//             return ele != value; 
+//        function arrayRemove(arr, value) {
+//         return arr.filter(function(ele){
+//             return ele != value;
 //         });
 //     }
 //     var result = arrayRemove(array, 6); // result = [1, 2, 3, 4, 5, 7, 8, 9, 0]
-    
+
 // Way 7: Explicitly Remove Array Elements Using the Delete Operator
 //          var ar = [1, 2, 3, 4, 5, 6];
 //          delete ar[4]; // delete element with index 4
@@ -1419,19 +1463,19 @@
 
 //     // add the first element in each remaining row (going upwards)
 //     var tmp = [];
-//     input.forEach(function(leftEnd) {    
+//     input.forEach(function(leftEnd) {
 //         tmp.push(leftEnd.shift());
 //     });
 //     console.log("res4", result) //[1, 2, 3, 4, 8, 12, 16, 15, 14, 13]
 //     console.log("in4", input)   //[[6, 7], [10, 11]]
-    
+
 //     result = result.concat(tmp.reverse());
 //     console.log("temp", temp) //[9, 5]
 //     console.log("res5", result) //[1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5]
 //     console.log("in5", input)   //[[6, 7], [10, 11]]
-    
+
 //     //again start the function
-//     return run(input, result); 
+//     return run(input, result);
 // }
 // console.log('result', run(input, [])); // [1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10]
 // ================================================================================================================================================================================
@@ -1465,7 +1509,6 @@
 //     return accum + curr;
 // },5) // can set initial value as 5 also
 // console.log(sum) //20
-
 
 // let product = arr.reduce((accum, curr) =>{
 //     return accum * curr;
@@ -1527,7 +1570,7 @@
 //     input = Math.floor(input/10) //12 //1
 //    // console.log("in", input)
 //   }
-  
+
 //   return result
 // }
 // console.log(reverseNumber(123)) //321
@@ -1547,7 +1590,7 @@
 //   }
 //   return false
 // }
-// console.log(CheckArmstrongNum(153)) //3*3*3 + 5*5*5 + 1*1*1 
+// console.log(CheckArmstrongNum(153)) //3*3*3 + 5*5*5 + 1*1*1
 // ================================================================================================================================================================================
 // code 65: To find the closest number in an array
 // const needle = 5;
@@ -1738,9 +1781,9 @@
 //       {
 //         count[arr[i]]=i //if not exist keep at count
 //       }
-//       console.log("count", count) 
+//       console.log("count", count)
 //     }
-//   return count   
+//   return count
 // }
 // firstRepeatingIndex([1,0,2,3,4,4,5,7,7])
 
@@ -1748,11 +1791,11 @@
 // code 81: To find all the subsets of the set
 // function generateSubsets (arr) { //[1,2]
 //   let subsets = [];
-//   for (const item of arr) 
+//   for (const item of arr)
 //   {
 //     const tempSubsets = [...subsets];
 //     console.log("tempSubsets",tempSubsets) //[]//[[1]]
-//     for (const currSubset of tempSubsets) 
+//     for (const currSubset of tempSubsets)
 //     {
 //       subsets.push([...currSubset, item]);
 //       console.log("subsets",subsets) //not came//[[1], [1,2]]
@@ -1768,10 +1811,10 @@
 // OR
 // function generateSubsets (arr) {
 //   let subsets = [];
-//   for (const item of arr) //[1,2] 
+//   for (const item of arr) //[1,2]
 //   {
 //     const tempSubsets = [...subsets];//[]//[[1]]
-//     for (const currSubset of tempSubsets) 
+//     for (const currSubset of tempSubsets)
 //     {
 //       subsets.push([...currSubset, item]);//not came//[[1], [1,2]]
 //     }
@@ -1782,7 +1825,7 @@
 // }
 // generateSubsets([1, 2]);
 // OR
-// function findAllSubsetsoOfGivenSet(arr) 
+// function findAllSubsetsoOfGivenSet(arr)
 // {
 //    var result= arr.reduce((subsets, value) => subsets.concat(subsets.map(set => [value,...set])),
 //                           [[]]) //[[]] is used to pass initial value
@@ -1805,7 +1848,7 @@
 
 // console.log(findAllSubsets([1,2]))
 // ================================================================================================================================================================================
-// Code 82: To find the maximum repetation of the character in a string  
+// Code 82: To find the maximum repetation of the character in a string
 //  function maxRepeating(str)
 //     {
 //         let count = 0;
@@ -1850,12 +1893,12 @@
 // {
 //     for(let i = 0; i < arr.length; i++)
 //     {
-//         if (arr[0] != arr[i] - i) 
+//         if (arr[0] != arr[i] - i)
 //         {
 //             while (arr[0] < arr[i] - i)
 //             {
 //                 console.log(arr[0]+i);
-//                 arr[0]++; 
+//                 arr[0]++;
 //             }
 //         }
 //     }
@@ -1911,7 +1954,7 @@
 // -------------------------------------------------------------------
 // function frequencySort(str) {
 //  let map = {}, res = "", sortedArr;
-//  for (const letter of str)map[letter]=(map[letter] || 0) + 1; 
+//  for (const letter of str)map[letter]=(map[letter] || 0) + 1;
 //  sortedArr = Object.keys(map).sort((a, b) => map[b] - map[a]);
 //  for (let letter of sortedArr) {
 //       for (let count = 0; count < map[letter]; count++) {
@@ -1925,13 +1968,13 @@
 // Code 88: To find the OCCURANCE of the character
 // function frequencySort(str) {
 //    let map = {}
-//    for (var i=0; i<str.length; i++) 
+//    for (var i=0; i<str.length; i++)
 //    {
 //      map[str[i]] = map[str[i]] ? map[str[i]]+1 : 1;  //Adding an element to the object, if already present then incrementing by 1
 //    }
 //    console.log(map)////{"c":1, "C:1", "a":2, "A":2, "b":3, "B":3}
 // };
-// frequencySort("cCaaAAbbbBBB"); 
+// frequencySort("cCaaAAbbbBBB");
 // OR
 // function frequencySortArr(arr) {
 //    let map = {}
@@ -1943,15 +1986,15 @@
 // Code 89: Permutation // Need to debug
 // let perm= (str, result)=> {
 //   if(str.length==0){console.log("result", result)} //let //lte //elt //etl //tle //tel
-  
+
 //   for(var i=0; i<str.length; i++){
-//     let rest= str.substring(0,i)+ str.substring(i+1) 
+//     let rest= str.substring(0,i)+ str.substring(i+1)
 //    // console.log("rest", rest) //et//t//"" //e//"" //lt//t//"" //l//"" //le//e//"" //l//""
-//     console.log("finalresult",result+str[i])  //l//le//let  //lt//lte  //e//el//elt  //et//etl  //t//tl//tle  //te//tel 
-//     perm(rest, result+str[i]) 
+//     console.log("finalresult",result+str[i])  //l//le//let  //lt//lte  //e//el//elt  //et//etl  //t//tl//tle  //te//tel
+//     perm(rest, result+str[i])
 //   }
 // }
-// perm('let',''); 
+// perm('let','');
 // //"result" "let"
 // //"result" "lte"
 // //"result" "elt"
@@ -1990,8 +2033,8 @@
 //     for (let word of words)
 //     {
 //         let sortedWord = word.split('').sort().join('') //arrange ervery word in alphabetical order
-//         anagrams[sortedWord] = anagrams[sortedWord]  || [] //console.log(".",anagrams) //creating keys 
-//         anagrams[sortedWord].push(word) // assigning exact values to keys //console.log("..", anagrams) 
+//         anagrams[sortedWord] = anagrams[sortedWord]  || [] //console.log(".",anagrams) //creating keys
+//         anagrams[sortedWord].push(word) // assigning exact values to keys //console.log("..", anagrams)
 //     }
 //     console.log(anagrams)
 //     for (let item in anagrams)
@@ -2008,7 +2051,7 @@
 //  let odd =[]
 //  let result=[]
 //  for(let i=0; i<arr.length; i++){
-//    if(arr[i]%2 ===0 ) even.push(arr[i]) 
+//    if(arr[i]%2 ===0 ) even.push(arr[i])
 //    else odd.push(arr[i])
 //  }
 // result = even.concat(odd)
@@ -2023,7 +2066,7 @@
 //             return 1;
 //         else if (a!=0 && b==0)
 //             return -1;
-//         else 
+//         else
 //             return 0;
 //     });
 // console.log(array)
@@ -2037,7 +2080,7 @@
 //             arr.push(temp[0]);
 //         }
 //     }
-//     return arr; 
+//     return arr;
 // };
 // console.log(moveZeroes([1,0,4,8,6,0,8,3,39,0])) //[1,4,8,6,8,3,39,0,0,0]
 // OR
@@ -2049,17 +2092,17 @@
 //             arr.push(0);
 //         }
 //     }
-//     return arr; 
+//     return arr;
 // };
 // console.log(moveZeroes([1,0,4,8,6,0,8,3,39,0]))
 // ================================================================================================================================================================================
 // Code 95: Print consecutive numbers
-// function range(num) 
+// function range(num)
 // {
 //     var result =[]
 //     for(var i =0; i<num; i++)
 //     {
-//     result.push(i) 
+//     result.push(i)
 //     }
 //     return result
 // };
@@ -2084,9 +2127,9 @@
 //         if (Array.isArray(el))
 //         {
 //             el = sumArray(el); //recursion
-//         }   
+//         }
 //         sum += el;
-//     }   
+//     }
 //     return sum;
 // }
 // console.log(sumArray([1, 2, [3, [4], [5, 6]], [7]])) //28
@@ -2106,13 +2149,13 @@
 //      if(temp === number && temp !== 0)
 //         {
 //        console.log("It is a perfect number.");
-//         } 
+//         }
 //      else
 //         {
 //        console.log("It is not a perfect number.");
-//         }   
-//  } 
-// is_perfect(28); 
+//         }
+//  }
+// is_perfect(28);
 // ================================================================================================================================================================================
 // Code 99: Number of days between 2 dates calculation
 // date1 = "2020-01-01", date2 = "2020-01-30"
@@ -2134,8 +2177,8 @@
 //     return;
 //   }
 //   var output = '';
-//   var count = 0; 
-//   for (var i = 0; i < str.length; i++) 
+//   var count = 0;
+//   for (var i = 0; i < str.length; i++)
 //   {
 //     count++;
 //     if (str[i] != str[i+1]) //if a is not equal to b
@@ -2153,12 +2196,12 @@
 // ---------------------------------------------------------------
 // function stringCompression (str) {
 //   var output = '';
-//   var count = 0; 
+//   var count = 0;
 //   for (var i = 0; i < str.length; i++){
 //     count++;
 //     if (str[i] != str[i+1]) {
-//       output += str[i] + count; 
-//       count = 0; 
+//       output += str[i] + count;
+//       count = 0;
 //     }
 //   }
 //   console.log(output);
@@ -2174,7 +2217,7 @@
 //   / \
 //  1   2
 // Given tree t:
-//    4 
+//    4
 //   / \
 //  1   2
 // -----------------------
@@ -2279,7 +2322,6 @@
 
 // ================================================================================================================================================================================
 
-
 // JAVASCRIPTS Inbuilt Functions:
 
 // Code : JAVASCRIPT substr concept
@@ -2336,8 +2378,7 @@
 // ================================================================================================================================================================================
 // Advance Interview Concepts
 
-
-// 1. Closures- 
+// 1. Closures-
 // A closure is the combination of a function and the lexical environment within which that function was declared.
 // OR
 // When inner function can have access to the outer function variables and parameter.
@@ -2360,7 +2401,7 @@
 
 // Disadvantages of closures:
 // 1. Creating function inside a function leads to duplicate in memory and cause slowing down the application means use only when required privacy.
-// 2. As long as the clousers are active, the memory can't be garbage collected means if we are using clousers in ten places then untill all the 10 process complete 
+// 2. As long as the clousers are active, the memory can't be garbage collected means if we are using clousers in ten places then untill all the 10 process complete
 // it hold the memory and can overcome to set closure to Null.
 
 // const outerFunction =(a)=>{
@@ -2381,7 +2422,7 @@
 //   }
 //   return innerFunction
 // }
-// outerFunction(5) //output : 
+// outerFunction(5) //output :
 //  ()=>{
 //     let sum = a+b;
 //     console.log(sum)
@@ -2399,21 +2440,21 @@
 // console.log(inner)
 // inner() //15
 // ================================================================================================================================================================================
-// Prototype: 
+// Prototype:
 // Prototype allow to easily define methods to all the instances of object. It stored in the memory once but every object instances can access it.
 
 // 1. Javascript is a prototype based language, so, whenever we are creating a function using javascript, javascript engine adds a prototype property inside a function,
 // Prototype property is basically an object (also known as Prototype object), where we can attach methods and properties in a prototype object, which enables all the
 // other objects to inherit these methods and properties.
 // 2. We are creating prototype in constructor function. All the intances of objects can able to access properties and methods from constuctor function.
-// 3. The prototype is an object that is associated with every functions and objects by default in JavaScript, where function's prototype property is accessible and 
+// 3. The prototype is an object that is associated with every functions and objects by default in JavaScript, where function's prototype property is accessible and
 // modifiable and object's prototype property (aka attribute) is not visible.
 // 4. object's prototype property is invisible. Use Object.getPrototypeOf(obj) method instead of __proto__ to access prototype object.
 // 5. prototype is useful in keeping only one copy of functions for all the objects (instances).
 // 6. An Object has a prototype. A prototype is also an object. Hence Even it may have its own prototype object. This is referred to as prototype chain.
 
 // <A>Several Types:
-// 1. Object.prototype- It is a prototype OBJECT of object(cunstruction function where it will inherit all properties of Object.protorype). 
+// 1. Object.prototype- It is a prototype OBJECT of object(cunstruction function where it will inherit all properties of Object.protorype).
 // Prototype Object of Object.prototype is NULL.
 // 2. Array.prototype-Prototype Object of Array.prototype is Object.prototype and Prototype Object of Object.prototype is NULL.
 // 3. Function.prototype
@@ -2428,28 +2469,28 @@
 // console.log(priya.age) //21
 
 // <B>Purpose/Use of prototype:
-// 1) to find properties and methods of an object 
+// 1) to find properties and methods of an object
 // 2) to implement inheritance in JavaScript
 
 // <C>Difference between Prototype and __proto__:
-// 1. In reality, the only true difference between prototype and __proto__ is that the former is a property of a class constructor, 
+// 1. In reality, the only true difference between prototype and __proto__ is that the former is a property of a class constructor,
 //    while the latter is a property of a class instance.
 // 2. Instances have __proto__, classes have prototype.
 // 3. Instances of a constructor function use __proto__ to access the prototype property of its constructor function.
-// 4. __proto__ is invisible property of an object. It returns prototype object of a function to which it links to. 
-// 5. __proto__ is Deprecated. 
+// 4. __proto__ is invisible property of an object. It returns prototype object of a function to which it links to.
+// 5. __proto__ is Deprecated.
 // 6. Example:
 // function Person(name){
 //     this.name = name
-//  }; 
-// var eve = new Person("Eve"); 
+//  };
+// var eve = new Person("Eve");
 // eve.__proto__ == Person.prototype //true
 // eve.prototype  //undefined
 // 7. Example:
 // function Person() {
 //     this.name = 'John'
 // }
-// // adding property 
+// // adding property
 // Person.prototype.name = 'Peter';
 // Person.prototype.age = 23
 // const person1 = new Person();
@@ -2459,35 +2500,35 @@
 // ================================================================================================================================================================================
 // CSS Positions:
 
-// 1. Static: HTML elements are positioned static by default. Static positioned elements are not affected by the top, bottom, left, and right properties. 
+// 1. Static: HTML elements are positioned static by default. Static positioned elements are not affected by the top, bottom, left, and right properties.
 //    Imapct of margin or padding. Object can't move. it is always positioned according to the normal flow of the page.
 // 2. Relative: Object can move. It is positioned relative to its normal position. If want gap from its actual placed position then use it. It work with left,
 //    right, top, bottom properties.
-// 3. Fixed: Not allow to scroll up or down. is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. 
+// 3. Fixed: Not allow to scroll up or down. is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled.
 //    The top, right, bottom, and left properties are used to position the element. The element is positioned relative to the browser window
-// 4. Absolute: it is work with relative i.e, w.r.t parent. It is positioned relative to the nearest positioned ancestor (instead of positioned relative to the 
+// 4. Absolute: it is work with relative i.e, w.r.t parent. It is positioned relative to the nearest positioned ancestor (instead of positioned relative to the
 //    viewport, like fixed). if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
-// 5. Sticky: An element with position: sticky; is positioned based on the user's scroll position. Internet Explorer does not support sticky positioning. 
+// 5. Sticky: An element with position: sticky; is positioned based on the user's scroll position. Internet Explorer does not support sticky positioning.
 //    You must also specify at least one of top, right, bottom or left for sticky positioning to work. Use for to create menu.
 
 // ================================================================================================================================================================================
 // Time based Event:
 
-// SetTimeout: 
+// SetTimeout:
 // 1. allows us to run a FUNCTION ONCE, after the interval of time
-// 2. setTimeout() executes the passed function after given time. The id_value returned by setTimeout() function is stored in a variable and 
-//    it’s passed into the clearTimeout() function to clear the timer. 
+// 2. setTimeout() executes the passed function after given time. The id_value returned by setTimeout() function is stored in a variable and
+//    it’s passed into the clearTimeout() function to clear the timer.
 // 3. Syntax- let timerId = setTimeout(function, milliseconds, [arg1], [arg2], ...)
 // 4. Don't make a mistake by adding brackets () after the function otherwise gives undefined and nothing will scheduled.
 // 5. Example-
 // let timerId = function sayHi(phrase, who) {
 //   console.log( phrase + who );
 // }
-// setTimeout(sayHi, 1000, "Hello", "John"); 
+// setTimeout(sayHi, 1000, "Hello", "John");
 
 // SetInterval:
 // 1. allows us to run a function repeatedly, starting after the interval of time, then repeating continuously at that interval.
-// 2. setInterval() executes the passed function for the given time interval. The number id value returned by setInterval() function is stored 
+// 2. setInterval() executes the passed function for the given time interval. The number id value returned by setInterval() function is stored
 //    in a variable and it’s passed into the clearInterval() function to clear the interval.
 // 3. Syntax-
 // 4. Example
@@ -2506,26 +2547,26 @@
 // ================================================================================================================================================================================
 // Debouncing and Throttling in JavaScript: using in search box, scrolling or resize the widow size
 // 1. Create impact on performance of your website, but also prevent unnecessary API calls and load on the server.
-// 2. Debouncing and throttling techniques are used to limit the number of times a function can execute. ke button click, mouse move, search bar, window scrolling 
+// 2. Debouncing and throttling techniques are used to limit the number of times a function can execute. ke button click, mouse move, search bar, window scrolling
 //    and window resize allow the user to decide when to execute.
-// 3. The main difference between throttling and debouncing is that throttling executes the function at a regular interval, while debouncing executes the function only 
+// 3. The main difference between throttling and debouncing is that throttling executes the function at a regular interval, while debouncing executes the function only
 //    after some cooling period.
-// 4. Example: If you're scrolling, throttle will slowly call your function while you scroll (every X milliseconds). Debounce will wait until after you're done scrolling 
+// 4. Example: If you're scrolling, throttle will slowly call your function while you scroll (every X milliseconds). Debounce will wait until after you're done scrolling
 //    to call your function.
 
 // Throttling-
 // Throttling is a technique in which, no matter how many times the user fires the event, the attached function will be executed only once in a given time interval.
 
-// Debouncing- 
+// Debouncing-
 // No matter how many times the user fires the event, the attached function will be executed only after the specified time once the user stops firing the event.
 // The Debounce technique allow us to “group” multiple sequential calls in a single one.
 // var debounced_version = _.debounce(doSomething, 200);
 // $(window).on('scroll', debounced_version);
 // debounced_version.cancel();
 // ================================================================================================================================================================================
-// CALL, APPLY and BIND method: These methods allow us to write a function once and invoke it in a different context. They all attach this into a function (or object) 
-// and the difference is in the function invocation. Call and apply are pretty interchangeable. Just decide whether it’s easier to send in an array or a comma separated 
-// list of arguments. I always remember which one is which by remembering that Call is for comma (separated list) and Apply is for Array. Bind is a bit different. 
+// CALL, APPLY and BIND method: These methods allow us to write a function once and invoke it in a different context. They all attach this into a function (or object)
+// and the difference is in the function invocation. Call and apply are pretty interchangeable. Just decide whether it’s easier to send in an array or a comma separated
+// list of arguments. I always remember which one is which by remembering that Call is for comma (separated list) and Apply is for Array. Bind is a bit different.
 // It returns a new function. Call and Apply execute the current function immediately. The main concept behind all this methods is Function burrowing.
 
 // CALL:
@@ -2547,7 +2588,7 @@
 // const person1={
 //   firstName: "Priya",
 //   lastName:"Bagde"
-//  } 
+//  }
 // console.log(people.fullName.call(person1)); //Priya Bagde
 // console.log(people.fullName.apply(person1)); //Priya Bagde
 // let bound = people.fullName.bind(person1)
@@ -2570,33 +2611,30 @@
 // 4. Note: JavaScript only hoists declarations, not the initializations.
 // 5. JavaScript allocates memory for all variables and functions defined in the program before execution.
 // 6. Due to the concept of hoisting in JavaScript, we can call a function even before we define the function definition in our program's code.
-// 7. Variables defined with let and const are hoisted to the top of the block, but not initialized.Let and const are also hoisted but we cant access them 
+// 7. Variables defined with let and const are hoisted to the top of the block, but not initialized.Let and const are also hoisted but we cant access them
 // until they are assigned because they are in Temporal dead zone.To avoid Temporal deadzone we need to declare let and const to the top of our program!
 // ***when const gets hoisted it will be defined undefined,and further processing will get assigned the value , this violated the meaning of const , this is the fundamental reason why const doesn't get hoisted and let just got tagged along with this feature.
 
 // -- Can able to access variable and function before initialise. Can able to access it without any error.
 // -- console.log(getName); without parenthisis -- print the body of function.
 // -- if we remove var x=7 then it will get as refrennce error: x is not defined because x is not present at all and we are trying to access it.
-// -- with arrow and function expression 
+// -- with arrow and function expression
 // -- callstack
 // -- console.log(greetingName) //print the body  of a function
 
-// JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope, 
+// JavaScript Hoisting refers to the process whereby the interpreter appears to move the declaration of functions, variables or classes to the top of their scope,
 // before execution of the code.
 // This is a complete textbook type definition (thanks to MDN Docs for this), but what does it mean in simple words.
 // Hoisting simply means that we can access variables, before their initialisation & functions, before their declaration.
-// it gives us an advantage that no matter where functions and variables are declared, they are moved to the top of their scope 
+// it gives us an advantage that no matter where functions and variables are declared, they are moved to the top of their scope
 // regardless of whether their scope is global or local
-
-
-
 
 // Examples:
 // 1. Hoisting Function: If i write below code then JS compiler auto move declaration first then call of a function.
 // hello() //call
 // function hello(){ //declaration
 //   console.log("Hello world")
-// } 
+// }
 
 // 2. Hoisting Var keyword:
 // var x; //declaration
@@ -2622,8 +2660,8 @@
 // let x=7; //declaration and assignment
 // console.log(x) //call //7
 // -------------
-// const x; //declaration 
-// console.log(x) //call //Missing initializer in const declaration 
+// const x; //declaration
+// console.log(x) //call //Missing initializer in const declaration
 // x=7; //assignment
 
 // -------------------------------------------------------------------------------------
@@ -2669,7 +2707,7 @@
 // Window and This:
 
 // Window:
-// 1. Javascript engine create global context execution and allocate some memory space. It is a big object with lot of methods and functions which is created in global space 
+// 1. Javascript engine create global context execution and allocate some memory space. It is a big object with lot of methods and functions which is created in global space
 // by JS engine.
 // 2. Window is the main JavaScript object root, aka the global object in a browser, and it can also be treated as the root of the document object model. You can access it as window.
 // 3. window.document or just document is the main object of the potentially visible (or better yet: rendered) document object model/DOM.
@@ -2677,7 +2715,7 @@
 // 5. window.document.getElementById("header") is the same as document.getElementById("header").
 
 // This:
-// 1. At global level THIS points to the window. 
+// 1. At global level THIS points to the window.
 // 2. With Window object THIS variable is created by default.
 // 3. This === window //true
 
@@ -2693,7 +2731,7 @@
 // Even Propogation an STOP Propogation: Bydefault event capturing happen first and then even bubbling happen.
 
 // Event Bubbling:
-// 1. When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors. With bubbling, the event is 
+// 1. When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors. With bubbling, the event is
 //    first captured and handled by the innermost element and then propagated to outer elements.
 // 2. Bydefault event bubbling execute. To run event bubbling required to mention 3rd argument as FALSE or nothing.
 // 3. "child clicked"
@@ -2733,13 +2771,13 @@
 // for capturing:
 // document.querySelector("#grandparent").addEventListener("click",()=> {console.log("grandparent clicked")}, true);
 // document.querySelector("#parent").addEventListener("click",()=> {console.log("parent clicked")},true);
-// document.querySelector("#child").addEventListener("click",()=> {console.log("child clicked")},true); 
+// document.querySelector("#child").addEventListener("click",()=> {console.log("child clicked")},true);
 // stopPropogation:
 // document.querySelector("#grandparent").addEventListener("click",()=> {console.log("grandparent clicked")}, false);
 
 // document.querySelector("#parent").addEventListener("click",(e)=> {console.log("parent clicked"); e.stopPropogation()},false);
 
-// document.querySelector("#child").addEventListener("click",()=> {console.log("child clicked")},false); 
+// document.querySelector("#child").addEventListener("click",()=> {console.log("child clicked")},false);
 
 // ================================================================================================================================================================================
 // Event Delegation:
@@ -2749,9 +2787,9 @@
 // 3. In the handler we get event.target to see where the event actually happened and handle it.
 // 4. Less memory usage, better performance.
 // 5. Less time required to set up event handlers on the page.
-// 6. Event delegation is a pattern to handle events efficiently in JavaScript. The main idea is to reduce the number of event handlers on a webpage and thus 
+// 6. Event delegation is a pattern to handle events efficiently in JavaScript. The main idea is to reduce the number of event handlers on a webpage and thus
 //    improving the performance of the website.
-// 7. When there are multiple DOM elements present, instead of adding event handlers on each one of them, you can just add one event handler 
+// 7. When there are multiple DOM elements present, instead of adding event handlers on each one of them, you can just add one event handler
 //    (on the parent/common ancestor element) which can do the exact same work which all those multiple event handlers were supposed to do.
 
 // Example:
@@ -2762,7 +2800,7 @@
 // <script>
 //   document.addEventListener('click', function(event) {
 
-//     if (event.target.dataset.counter != undefined) { 
+//     if (event.target.dataset.counter != undefined) {
 //       event.target.value++;
 //       console.log(event.target.value)
 //     }
@@ -2772,7 +2810,7 @@
 // Polyfill:
 
 // 1. With the help of polyfill can write own implementation of BIND function.
-// 2. Polyfills is a way to use modern features (usually JS) on browsers where it is currently unsupported.  We do this by mimicking the functionality using supported methods 
+// 2. Polyfills is a way to use modern features (usually JS) on browsers where it is currently unsupported.  We do this by mimicking the functionality using supported methods
 // along with our own logic.
 // 3. A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.
 
@@ -2835,7 +2873,7 @@
 // You need to load a polyfill if ES6 is not supported
 
 // 👉How to cancel a fetch request ?
-// ✌🏼One shortcoming of native promises is no direct way to cancel a fetch request. But the new AbortController from js specification allows you to use a signal to abort one or multiple fetch calls. 
+// ✌🏼One shortcoming of native promises is no direct way to cancel a fetch request. But the new AbortController from js specification allows you to use a signal to abort one or multiple fetch calls.
 // ================================================================================================================================================================================
 // 👉What are default parameters?
 // ✌🏼In E5, we need to depend on logical OR operators to handle default values of function parameters. Whereas in ES6, Default function parameters feature allows parameters to be initialized with default values if no value or undefined is passed. Let's compare the behavior with an examples,
@@ -2877,7 +2915,7 @@
 // }
 // test();    // number, Value of a: 1
 // test(undefined);    // number, Value of a: 1
-// test('');    // string, Value of a: 
+// test('');    // string, Value of a:
 // test(null);    // object, Value of a: null
 
 // ✌🏼Default Parameters are evaluated at Call time-
@@ -2894,14 +2932,14 @@
 // ================================================================================================================================================================================
 // Polyfill of Bind:
 // const name ={
-//   firstName: "Priya", 
+//   firstName: "Priya",
 //   lastName: "Bagde"
 // }
 
 // let printName = function(hometown, state, country){
 //   console.log(this.firstName + " " + this.lastName + " " + state + " " + country)
 // }
-// let printMyName = printName.bind(name, "Mumbai", "MH"); 
+// let printMyName = printName.bind(name, "Mumbai", "MH");
 // printMyName("India"); //with bind method
 
 // //polyfill
@@ -2913,12 +2951,12 @@
 //   }
 // }
 // let printMyName2 = printName.mybind(name, "Mumbai", "MH")
-// printMyName2("India"); //with polyfill of bind 
+// printMyName2("India"); //with polyfill of bind
 // ================================================================================================================================================================================
 // Polyfill of Call:
 // const myName = {
 //   firstName: "Priya",
-//   lastName : "Bagde"  
+//   lastName : "Bagde"
 // }
 
 // function printName(city, country){
@@ -2942,7 +2980,7 @@
 // Polyfill of Apply:
 // const myName = {
 //   firstName: "Priya",
-//   lastName : "Bagde"  
+//   lastName : "Bagde"
 // }
 
 // function printName(city, country){
@@ -3000,7 +3038,7 @@
 //   for (let i = 0; i < this.length; i++) {
 //      if (cb(this[i])) {
 //       results.push(this[i]);
-//     }   
+//     }
 //   }
 //   return results;
 // }
@@ -3159,7 +3197,7 @@
 //   new Promise((resolve, reject) => setTimeout(resolve, 400, 67)),
 // ];
 
-// Promise.allSettled(promises).then((result) => console.log(result)); 
+// Promise.allSettled(promises).then((result) => console.log(result));
 // /*[{
 //   status: "fulfilled",
 //   value: 2
@@ -3236,7 +3274,7 @@
 // var d= Promise.letsBuildAnAny([a,b,c]);
 // d.then(result=>console.log(result))
 // ===========================================================================================================================================================================
-// Rest Parameter in Array : 
+// Rest Parameter in Array :
 // function addSum(a,b,c, ...rest){ // ...rest indicating combination of those arguments which are left(rest).
 //   console.log(...rest) //6,7
 //   console.log(rest) //[6,7]
@@ -3254,7 +3292,7 @@
 // getNames(...names) //spread operator here used to spread the individual arguments //best approach because here we are passing all the arguments but we can use some of the arguments inside function without an error. Other approaches will gives an error to pass those arguments which are used in function.
 // getNames(names)
 // =========================================================================================================================================================================
-// Rest Spread in object: 
+// Rest Spread in object:
 // var student ={
 //   name: "priya",
 //   age : 100,
@@ -3295,12 +3333,12 @@
 //    let output ="";
 //    data.forEach((item)=>{
 //     output +=`<li> ${item.name}</li>`
-//    })    
+//    })
 //    document.body.innerHTML = output;
 //  }, 1000)  //use 5000 instead of 1000 then we get a name of "dhanupriya".
 // }
 // function createData(dataInput){
-// setTimeout(()=>{data.push(dataInput)}, 2000) 
+// setTimeout(()=>{data.push(dataInput)}, 2000)
 // }
 // createData({name: "dhanupriya", role: "software developer"})
 // getData()
@@ -3317,15 +3355,15 @@
 //    let output ="";
 //    data.forEach((item)=>{
 //     output +=`<li> ${item.name}</li>`
-//    })    
+//    })
 //    document.body.innerHTML = output;
-//  }, 1000)  
+//  }, 1000)
 // }
 // function createData(dataInput, callback){
 //    setTimeout(()=>{
-//         data.push(dataInput) 
+//         data.push(dataInput)
 //         callback(); //getdata function will get call once we push the new dataInput
-//    },2000) 
+//    },2000)
 // }
 // createData({name: "dhanupriya", role: "software developer"}, getData) //we are passing getData function as a callback
 // ====================================================================
@@ -3341,7 +3379,7 @@
 //    let output ="";
 //    data.forEach((item)=>{
 //     output +=`<li> ${item.name}</li>`
-//    })    
+//    })
 //    document.body.innerHTML = output;
 //  }, 1000)  //use 5000 instead of 1000 then we get a name of "dhanupriya".
 // }
@@ -3352,9 +3390,9 @@
 //         let error = false; //if trure then went to catch block
 //         if(!error) resolve();
 //         else reject("Error!!!!");
-//    },2000) 
+//    },2000)
 // })
-   
+
 // }
 // createData({name: "dhanupriya", role: "software developer"})
 // .then(getData)
@@ -3372,7 +3410,7 @@
 //    let output ="";
 //    data.forEach((item)=>{
 //     output +=`<li> ${item.name}</li>`
-//    })    
+//    })
 //    document.body.innerHTML = output;
 //  }, 1000)  //use 5000 instead of 1000 then we get a name of "dhanupriya".
 // }
@@ -3383,8 +3421,8 @@
 //         let error = false; //if trure then went to catch block
 //         if(!error) resolve();
 //         else reject("Error!!!!");
-//    },2000) 
-// })   
+//    },2000)
+// })
 // }
 
 // async function start(){ //using sync and await
@@ -3422,7 +3460,7 @@
 //   age: 100,
 //   role: "Software Developer",
 //   printDetail : function(){
-//     console.log(this)// this representing userDetails whole object 
+//     console.log(this)// this representing userDetails whole object
 //   }
 // }
 // userDetails.printDetail();
@@ -3450,7 +3488,7 @@
 //   age: 101,
 //   role: "Software Developer"
 // }
-// printDetail.call(userDetails2); 
+// printDetail.call(userDetails2);
 // --------------------------------------------------------------------------------
 // var userDetails ={
 //   name: "Priya",
@@ -3468,8 +3506,8 @@
 //   role: "Software Developer"
 // }
 
-// printDetail.call(userDetails2, "India"); 
-// printDetail.apply(userDetails2, ["India"]); 
+// printDetail.call(userDetails2, "India");
+// printDetail.apply(userDetails2, ["India"]);
 // let bindfunc= printDetail.bind(userDetails2, "India"); //creating a copy and invoke whenever require //don't call the diectly here like call function
 // bindfunc();
 // ========================================================================================================================================================================
@@ -3484,7 +3522,7 @@
 //   console.log(Data[i])
 // }
 
-// //foreach is HOF which take callback 
+// //foreach is HOF which take callback
 // Data.forEach((item)=>{ console.log(item) })
 // =====================================================================================================================================================================
 // Filter:
@@ -3515,7 +3553,6 @@
 // //a<b //[66,44,22,11,7,3,3,2]
 // //a>b //[2,3,3,7,11,22,44,66]
 
-
 // const sorted1= Data.sort((a,b)=>b-a)
 // console.log(sorted1) //prefer for arrays
 // //b-a //[66,44,22,11,7,3,3,2]
@@ -3535,7 +3572,7 @@
 
 // console.log(updated)
 // ======================================================================================================================================================================
-// ProtoType: If we can inherit the property of the one class to other class called as Inheritence. 
+// ProtoType: If we can inherit the property of the one class to other class called as Inheritence.
 
 // const objName = {
 //  name : "priya",
@@ -3543,7 +3580,7 @@
 //    return this.name; //wanted to access above name inside block so we used "this"
 //  }
 // }
-// console.log("1",objName.getName()); 
+// console.log("1",objName.getName());
 
 // const objState = {
 //   //name: "riya",
@@ -3564,7 +3601,7 @@
 //   let newObj ={}
 //   this.forEach( ele =>{
 //             newObj[ele]= ele;
-//         }      
+//         }
 //   )
 //   return newObj;
 // }
@@ -3610,10 +3647,9 @@
 // of function. Var or functions will push to Callstack and then pop.
 // ============================================================================================================================================================================
 // 2 ways of Currying function with closures:
-  
-  
+
 // *****Using Normal Function******
-  
+
 // function add(a){
 //   return function(b){
 //     if(b) return add(a+b);
@@ -3622,9 +3658,8 @@
 // }
 // console.log('Sum :', add(1)(2)(3)(4)(5)(6)(7)(8)()) //"Sum :", 36
 
-
 // *****Using Arrow Function******
-  
+
 // function sum(num1) {
 //         return (num2) => {
 //             if(!num2) {
@@ -3662,10 +3697,10 @@
 // *************Using Boolean*************
 
 // [1, 2, 'b', 0, {}, '', NaN, 3, undefined, null, 5].filter(a => Boolean(a));
- 
+
 // *************Using Boolean directly*************
-  
-// [1, 2, 'b', 0, {}, '', NaN, 3, undefined, null, 5].filter(Boolean); 
+
+// [1, 2, 'b', 0, {}, '', NaN, 3, undefined, null, 5].filter(Boolean);
 
 // //This works because Boolean itself is a function, and the arguments filter supplies are passed directly to it.
 // //Boolean() is also a function that returns truthy when true and falsy when false!
@@ -3673,7 +3708,7 @@
 // Memo Function:
 
 // ********************Memoizing functions**********************
-  
+
 // const add = (n) => (n + 10);
 // add(9);
 // // a simple memoized function to add something
@@ -3693,7 +3728,7 @@
 // 	}
 // }
 // // returned function from memoizedAdd
-// const newAdd = memoizedAdd(); 
+// const newAdd = memoizedAdd();
 // console.time(); console.log(newAdd(9)); console.timeEnd();// calculated
 // console.time(); console.log(newAdd(9)); console.timeEnd();	// cached
 // console.time(); console.log(newAdd(9)); console.timeEnd();	// cached
@@ -3703,7 +3738,7 @@
 // //Fetching from cache   19    default: 0.27612304687 ms
 
 // ********************Memoizing recursive functions**********************
-  
+
 // // a simple pure function to get a value adding 10
 // const add = (n) => (n + 10);
 // // a simple memoize function that takes in a function and returns a memoized function
@@ -3743,7 +3778,7 @@
 // {
 //   inputArray.map((value)=>{
 //     if(Array.isArray(value))
-//     { 
+//     {
 //       flattenArray(value)
 //     }
 //     else{
@@ -3768,10 +3803,10 @@
 //            [56,[5]]]
 // var updatedArr= age.flat(Infinity);
 // console.log(updatedArr) //[1,2,12,23,75,34,2,34,32,45,3,456,56,5]
-  
+
 // *********************Using Reducer****************
 // function flatDeep(arr, d = 1) {
-//    return d > 0 ? arr.reduce((acc, val) => 
+//    return d > 0 ? arr.reduce((acc, val) =>
 //                              acc.concat(Array.isArray(val) ? flatDeep(val, d - 1) : val), [])
 //                 : arr.slice();
 // };
@@ -3808,7 +3843,7 @@
 // A deep copy means that "all of the values of the new variable" are copied and disconnected from the original variable. It makes a copy of all the members of X, allocates different memory location for Y and then assigns the copied members to Y to achieve deep copy. In this way, if X vanishes Y is still valid in the memory.
 // A shallow copy means that certain (sub-)values are still connected to the original variable. It is primarily utilized for copying One Dimensional array elements, where it only copies the elements present at the first level.
 
-// A deep copying means that value of the new variable is disconnected from the original variable 
+// A deep copying means that value of the new variable is disconnected from the original variable
 // while a shallow copy means that some values are still connected to the original variable.
 
 // addresses of X and Y will be the same i.e. they will be pointing to the same memory location.
@@ -3819,16 +3854,15 @@
 // --->Use the Object.assign() method
 // --->Use the JSON.stringify() and JSON.parse() methods --where the stringify() method converts a particular JavaScript object to a string, and then the parse() method performs the parsing operation and returns an object.
 
-// For a primitive value, you just simply use a simple assignment:The important takeaway here is that you can quickly copy a primitive data type’s exact value 
-// in a separate memory space by creating and assigning another variable to the variable being copied. Take note of how it is instantiated — const will not 
+// For a primitive value, you just simply use a simple assignment:The important takeaway here is that you can quickly copy a primitive data type’s exact value
+// in a separate memory space by creating and assigning another variable to the variable being copied. Take note of how it is instantiated — const will not
 // allow later changes.
 
 // let counter = 1;
 // let copiedCounter = counter;
 // copiedCounter = 2; //And when you change the value of the copied variable, the value of the original remains the same.
-// console.log(counter); 
+// console.log(counter);
 // Output: 1
-
 
 // However, if you use the assignment operator for a reference value, it will not copy the value. Instead, both variables will reference the same object in the memory:
 
@@ -3840,7 +3874,7 @@
 //     if(map[item]){
 //         map[item]++
 //     }else{
-//         map[item] = 1; 
+//         map[item] = 1;
 //     }
 //   }
 //   return map;
@@ -3873,7 +3907,7 @@
 //   if(map.hasOwnProperty(item)){
 //     map[item] = map[item] + 1
 //   }else{
-//     map[item] = 1; 
+//     map[item] = 1;
 //   }
 //   }
 //   return map;
@@ -3881,7 +3915,7 @@
 // console.log(countOccurance([1, 4, 91, 21, 91, 0, 32, 4, 11, 3, 54, 34, 21]))
 // -------------------------------------------------------------------
 // function countOccurance(arr){
-//   let map ={}, sortedArr = arr.sort((a,b)=>a-b); 
+//   let map ={}, sortedArr = arr.sort((a,b)=>a-b);
 //   for(var item of sortedArr){
 //    map[item] = map[item]+1 || 1
 //   }
@@ -3904,7 +3938,7 @@
 //   if(map[item]){
 //  map[item] = map[item] + 1
 //   }else{
-//   map[item] = 1; 
+//   map[item] = 1;
 //   }
 //   }
 //   return map;
@@ -3912,10 +3946,10 @@
 // console.log(countOccurance([1, 4, 91, 21, 91, 0, 32, 4, 11, 3, 54, 34, 21]))
 // -------------------------------------------------------------------
 // function countOccurance(arr){
-//   let map ={}, sortedArr = arr.sort((a,b)=>a-b); 
-//   for (var i=0; i<sortedArr.length; i++) 
+//   let map ={}, sortedArr = arr.sort((a,b)=>a-b);
+//   for (var i=0; i<sortedArr.length; i++)
 //    {
-//    map[sortedArr[i]] = map[sortedArr[i]] ? map[sortedArr[i]]+1 : 1; 
+//    map[sortedArr[i]] = map[sortedArr[i]] ? map[sortedArr[i]]+1 : 1;
 //    }
 //   return map
 // }
@@ -3924,11 +3958,11 @@
 // var frequencySort = function(nums) {
 //   const hash={}
 //     for(let item of nums){
-//       hash[item] 
+//       hash[item]
 //           ?hash[item]++
 //           :hash[item]=1
 //     }
-//  return hash    
+//  return hash
 // };
 // console.log(frequencySort([1,1,2,2,2,3]))
 // --------------------------------------------------------------
@@ -3947,7 +3981,7 @@
 // };
 // console.log(frequencySort([1,1,2,2,2,3]))
 // ==========================================================================================================================================================================
-// Anagram:O(N) 
+// Anagram:O(N)
 // let NO_OF_CHARS = 256;
 // function areAnagram(str1, str2)
 // {
@@ -3988,7 +4022,7 @@
 // 	"not anagram of each other");
 
 // ========================================================================================================================================================================
-// // How can you make a linkedlist nodes in javascript and 
+// // How can you make a linkedlist nodes in javascript and
 // // hpw to check linkedlist is cyclic or not.
 
 // class LinkedList {
@@ -4026,9 +4060,9 @@
 // This: This is a keyword from where it gets belongs to. This is a current object. In javascript, this behave in diff manner, it depends in the env where it's getting
 // invoked. (https://www.youtube.com/watch?v=wp-NEcAck1k&t=427s)
 
-// In IIFE : this is pointing to Window 
+// In IIFE : this is pointing to Window
 // In object : if normal function then pointing to block scope. if arrow function pointing to window.
-// In function constructor : pointing to function 
+// In function constructor : pointing to function
 // If we didn't invoked properly(without paranthesis) then it will give undefined.
 // =======================================================================================================================================================================
 // function curryingWithRecursion(a){
@@ -4050,7 +4084,7 @@
 //   }
 // }
 // const printName = () => {
-//   console.log("Priya"); 
+//   console.log("Priya");
 // }
 
 // debounce(printName(), 8000)()
@@ -4141,7 +4175,7 @@
 // Polyfill of Flat:
 // function flatArray(arr){
 //   let result = arr.reduce((accum, item)=>{
-//     Array.isArray(item) 
+//     Array.isArray(item)
 //     ? accum.push(...flatArray(item))
 //     : accum.push(item);
 //     return accum
@@ -4157,20 +4191,20 @@
 //    while((i < arr1.length)&&(j< arr2.length)){
 //      if(arr1[i]<arr2[j]){
 //          mergedArray.push(arr1[i]);
-//          i++;  
+//          i++;
 //       }
 //       else{
 //          mergedArray.push(arr2[j]);
 //          j++;
-//       }   
+//       }
 //     }
-//    if(i<=(arr1.length-1)){    
+//    if(i<=(arr1.length-1)){
 //      arr1.splice(0,i);
 //      mergedArray=mergedArray.concat(arr1);
 //    }
 //    else if(j<=(arr2.length-1)){
 //      arr2.splice(0,j);
-//      mergedArray=mergedArray.concat(arr2);  
+//      mergedArray=mergedArray.concat(arr2);
 //    }
 //    return mergedArray;
 // }
@@ -4184,12 +4218,12 @@
 //       }
 //       else{
 //          result.push(arr2[j]); j++;
-//       }   
+//       }
 //    }
-//    while(i < arr1.length){    
+//    while(i < arr1.length){
 //          result.push(arr1[i]); i++;
 //    }
-//    while(j< arr2.length){ 
+//    while(j< arr2.length){
 //          result.push(arr2[j]); j++;
 //    }
 //    return result;
@@ -4199,7 +4233,7 @@
 
 // =======================================================================================================================================================================
 // ********************Implementation of Currying*****************
-  
+
 // //fn is pointing to sum function, i.e (a,b,c,d) => a+b+c+d.
 // function currying(fn){
 //   //args is pointing to (1)(2)(3)(4)(5)
@@ -4252,7 +4286,6 @@
 // const inputArray = ["INDIA:[Delhi,Mumbai,Chennai]"]; //1
 // const extepctedOutputArray = ["INDIA:[Delhi]", "OR", "INDIA:[Mumbai]", "OR", "INDIA:[Chennai]"];
 
-
 // //GENERIC JS FUNCTION --> String with  comma will split as separate Items in new ARRAY and separated with OR between each
 
 // function convertToORBasedExpression (arr){
@@ -4264,11 +4297,7 @@
 //    outputArray.push("INDIA:"+item)
 //  }
 // // console.log(temp.slice(1,21).split(","))
-  
+
 //  return outputArray; //5
 // }
 // convertToORBasedExpression(inputArray)
-
-
-
-
