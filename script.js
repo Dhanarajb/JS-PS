@@ -17,6 +17,28 @@
 // //   return str.split('').reduce((rev, char) => char + rev);
 // // }
 // // console.log(reverse('Dhanaraj'));
+// We have a function reverse(str) that takes a single argument str.
+
+// str.split('') splits the input string 'Dhanaraj' into an array of characters ['D', 'h', 'a', 'n', 'a', 'r', 'a', 'j']. Each character is separated into its own element in the array.
+
+// The reduce method is called on the array. It takes two arguments: a callback function and an initial value. Here, the callback function (rev, char) => char + rev is used.
+
+// rev represents the accumulated result, which initially starts as an empty string ''.
+// char represents each character from the array during iteration.
+// The reduce function iterates through the array of characters from left to right, applying the callback function at each step.
+
+// Iteration 1: rev = '', char = 'D, so rev becomes 'D'.
+// Iteration 2: rev = 'D', char = 'h', so rev becomes 'hD'.
+// Iteration 3: rev = 'hD', char = 'a', so rev becomes 'ahD'.
+// Iteration 4: rev = 'ahD', char = 'n', so rev becomes 'nahD'.
+// Iteration 5: rev = 'nahD', char = 'a', so rev becomes 'anahD'.
+// Iteration 6: rev = 'anahD', char = 'r', so rev becomes 'ranahD'.
+// Iteration 7: rev = 'ranahD', char = 'a', so rev becomes 'aranahD'.
+// Iteration 8: rev = 'aranahD', char = 'j', so rev becomes 'jaranahD'.
+// The reduce function finishes, and the final result is 'jaranahD', which represents the reversed string.
+
+// console.log(reverse('Dhanaraj')); logs the reversed string 'jaranahD' to the console.
+
 // // ---------------
 
 // // (function (str) {
@@ -26,6 +48,23 @@
 // //   }
 // //   console.log(rever);
 // // })('dhanaraj');
+// We have an immediately-invoked function expression (IIFE) that takes a single argument str. The argument 'dhanaraj' is passed to the function when it's invoked.
+
+// let rever = '';: Initialize an empty string rever.
+
+// for (let charavter of str) { ... }: Start a loop that iterates over each character in the str string.
+
+// Iteration 1: charavter = 'd', rever = '' + 'd', rever becomes 'd'.
+// Iteration 2: charavter = 'h', rever = 'd' + 'h', rever becomes 'hd'.
+// Iteration 3: charavter = 'a', rever = 'h' + 'a', rever becomes 'ahd'.
+// Iteration 4: charavter = 'n', rever = 'a' + 'n', rever becomes 'nahd'.
+// Iteration 5: charavter = 'a', rever = 'n' + 'a', rever becomes 'anahd'.
+// Iteration 6: charavter = 'r', rever = 'a' + 'r', rever becomes 'ranahd'.
+// Iteration 7: charavter = 'a', rever = 'r' + 'a', rever becomes 'aranahd'.
+// Iteration 8: charavter = 'j', rever = 'a' + 'j', rever becomes 'jaranahd'.
+// The loop finishes, and we have the reversed string 'jaranahd'.
+
+// console.log(rever); prints the reversed string 'jaranahd' to the console.
 // // -----------Reverse the integer-----------
 // // const reverInt=(n)=>{
 // //   return (n.toString().split('').reverse().join(''))
