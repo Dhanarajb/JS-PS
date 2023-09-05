@@ -82,14 +82,15 @@
 // // MaxFind([1, 2, 3, 2, 223, 3, 4, 4, 555, 3]);
 
 // // --------------2nd largest-----------------
-// // const SecondLarge = (arr) => {
-// //   let FirstLarge = Math.max(...arr);
-// //   let index = arr.indexOf(FirstLarge);
-// //   arr.splice(index);
-// //   let SecondLargee = Math.max(...arr);
-// //   console.log(SecondLargee);
-// // };
-// // SecondLarge([1, 2, 3, 224, 223, 3, 4, 4, 555, 3]);
+// const SecondLarge = (arr) => {
+//   let FirstLarge = Math.max(...arr); // Find the maximum value in the array
+//   let index = arr.indexOf(FirstLarge); // Find the index of the maximum value
+//   arr.splice(index); // Remove the element at the index of the maximum value (incorrect usage)
+//   let SecondLargee = Math.max(...arr); // Find the maximum value in the modified array
+//   console.log(SecondLargee); // Print the second maximum value
+// };
+// SecondLarge([1, 2, 3, 224, 223, 3, 4, 4, 555, 3]);
+
 
 // // // ----------------Min element in arr----------
 // // const MinFind=(arr)=>{
@@ -115,13 +116,21 @@
 
 // // ------------occurance-----------
 // const maxChar = (str) => {
-//   let obj = {};
+//   let obj = {}; // Create an empty object to store character frequencies.
+
+//   // Loop through each character in the input string.
 //   for (let char of str) {
+//     // Check if the character is already a property in the object.
+//     // If it's not, initialize its count to 1; otherwise, increment its count.
 //     !obj[char] ? (obj[char] = 1) : obj[char]++;
 //   }
+
+//   // At this point, 'obj' contains character frequencies.
 //   console.log(obj);
 // };
-// maxChar('Dhanaraj');
+
+// maxChar('Dhanaraj'); // Call the function with the string 'Dhanaraj'.
+
 
 // function sameSquared(arr1, arr2) {
 //   // Check if the arrays have the same length
@@ -162,11 +171,11 @@
 // console.log(result); // Output: true
 
 // anagram
-function anu(a) {
-  return a.split('').reverse().join('');
-}
-console.log(anu('nayan'));
-console.log();
+// function anu(a) {
+//   return a.split('').reverse().join('');
+// }
+// console.log(anu('nayan'));
+// console.log();
 // // const maxChar = (str) => {
 // //   let obj = {};
 // //   for (let char of str) {
