@@ -4349,3 +4349,42 @@
 //  return outputArray; //5
 // }
 // convertToORBasedExpression(inputArray)
+
+
+function findCommonPrefix(str1, str2) {
+  let minLength = Math.min(str1.length, str2.length);
+  let commonPrefix = '';
+  
+  for (let i = 0; i < minLength; i++) {
+    if (str1[i] === str2[i]) {
+      commonPrefix += str1[i];
+    } else {
+      break; // Stop when the characters are no longer the same
+    }
+  }
+  
+  return commonPrefix;
+}
+
+function findCommonPrefixAmongStrings(arr) {
+  if (arr.length === 0) {
+    return '';
+  }
+  
+  let commonPrefix = arr[0];
+  
+  for (let i = 1; i < arr.length; i++) {
+    commonPrefix = findCommonPrefix(commonPrefix, arr[i]);
+    
+    // If the common prefix becomes empty, there is no need to continue
+    if (commonPrefix === '') {
+      break;
+    }
+  }
+  
+  return commonPrefix;
+}
+
+const arr = ['pritam', 'priti', 'priyanka'];
+const commonPrefix = findCommonPrefixAmongStrings(arr);
+console.log(commonPrefix); // Output: 'pri'
